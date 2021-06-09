@@ -24,7 +24,19 @@ public class ComparerNombre extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int nombreUtilisateur = -1;
 
+        try {
+            nombreUtilisateur = Integer.parseInt(request.getParameter("nombre"));
+            if (!trouver && nombreUtilisateur==nombreMystere){
+                response.sendRedirect("victoire.html");
+                trouver = true;
+            } else{
+                response.sendRedirect("defaite.html");
+            }
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+        }
     }
 
 }

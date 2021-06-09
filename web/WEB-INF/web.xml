@@ -20,6 +20,6 @@
     
     <servlet-mapping>
         <servlet-name>ComparerNombre</servlet-name>
-        <url-pattern>"/ComparerNombre"</url-pattern>
+        <url-pattern>/ComparerNombre</url-pattern>
     </servlet-mapping>
 </web-app>
